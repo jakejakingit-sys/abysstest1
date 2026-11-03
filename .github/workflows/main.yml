@@ -28,7 +28,7 @@ jobs:
           echo "$RUNNER_TEMP/cedev/CEdev/bin" >> "$GITHUB_PATH"
 
       - name: Build calculator program
-        run: make clean all
+        run: make clean build
 
       - name: Check build outputs
         run: |
