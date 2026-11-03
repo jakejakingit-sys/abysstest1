@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    defaults:
+      run:
+        working-directory: ./ABYSS-source
 
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
@@ -37,6 +40,6 @@ jobs:
         with:
           name: abyss-ti84-ce
           path: |
-            ABYSS.8xp
-            ABYSS.map
+            ABYSS-source/ABYSS.8xp
+            ABYSS-source/ABYSS.map
           if-no-files-found: error
